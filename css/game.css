@@ -1,0 +1,111 @@
+body {
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+}
+h1, h2 {
+  color: black;
+  font-family: Ubuntu Mono;
+}
+#ask {
+  width: 100%;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  padding: 10vh;
+}
+.button {
+  border: none;
+  color: white;
+  width: calc(50% - 10vh);
+  height: 40vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Ubuntu Mono;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: fixed;
+}
+.button:nth-child(1) {
+  background-color: #bf0000;
+  top: 10vh;
+  left: 10vh;
+}
+.button:nth-child(2) {
+  background-color: #001fbf;
+  top: 10vh;
+  right: 10vh;
+}
+.button:nth-child(3) {
+  background-color: #efb200;
+  bottom: 10vh;
+  left: 10vh;
+}
+.button:nth-child(4) {
+  background-color: #1fbf1f;
+  bottom: 10vh;
+  right: 10vh;
+}
+@media screen and (max-width: 500px) {
+  #container {
+    padding: initial;
+  }
+  .button {
+    width: 100%;
+    height: 20vh;
+  }
+  .button:nth-child(1) {
+    top: 20vh;
+    left: initial;
+  }
+  .button:nth-child(2) {
+    top: 40vh;
+    right: initial;
+  }
+  .button:nth-child(3) {
+    top: 60vh;
+    bottom: initial;
+    left: initial;
+  }
+  .button:nth-child(4) {
+    top: 80vh;
+    bottom: initial;
+    right: initial;
+  }
+}
+form, input {
+  display: none;
+  visibility: hidden;
+}
+* {
+  touch-action: manipulation;
+}
+
+.place {
+  width: 100%;
+  text-align: center;
+}
+.place:nth-child(1) {
+  top: 20vh;
+}
+.place:nth-child(2) {
+  top: 30vh;
+}
+.place:nth-child(3) {
+  top: 40vh;
+}
+.place:nth-child(4) {
+  top: 50vh;
+}
+
+#leaderboard {
+  display: none;
+  visibility: hidden;
+}

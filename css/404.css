@@ -1,0 +1,9 @@
+body {
+  background-color: black;
+  overflow: hidden;
+  position: fixed;
+}
+h1, a {
+  color: white;
+  font-family: Ubuntu Mono;
+}
