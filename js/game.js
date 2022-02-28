@@ -20,7 +20,7 @@ if (getCookie() != "") {
 }
 
 function setCookie(value) {
-  document.cookie = "username=" + value + ";";
+  document.cookie = "username=" + value + ";secure";
   return value;
 }
 
