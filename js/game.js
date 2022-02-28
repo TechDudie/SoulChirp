@@ -1,46 +1,57 @@
-var input = "";
 var username = "";
+const d = new Date();
+var time = 0;
+var time2 = 0;
+var diff = 0;
+var timed = false;
+var answer = "x";
+
+function hide(id) {
+  var object = element(id)
+  object.style.display = "none";
+  object.style.visibility = "hidden";
+}
+
+if (getCookie() != "") {
+  hide("username");
+  timed = true;
+  username = getCookie();
+  time = d.getTime();
+}
+
+function setCookie(value) {
+  document.cookie = "username=" + value + ";";
+  return value;
+}
+
+function getCookie() {
+  return document.cookie.split("=")[1];
+}
+
+function element(id) {
+  return document.getElementById(id);
+}
 
 // input
 document.addEventListener("keydown",  e => {
-  if (e.keyCode === 8)  {
-    if (input == "") {
-      e.preventDefault();
-    } else {
-      input = input.slice(0,-1);
-    }
-  } else if (e.keyCode === 13)  {
+  if (e.keyCode === 13) {
     e.preventDefault();
-    username = input;
+    username = document.getElementById("usernametext").value;
+    hide("username");
+    setCookie(username);
+    if (!timed) {
+      time = d.getTime();
+    }
     document.removeEventListener("keydown");
-  } else {
-    input += String.fromCharCode(e.keyCode);
   }
 });
 
-// a
-function a() {
-  send(username, "a");
-}
-
-// b
-function b() {
-  send(username, "b");
-}
-
-// c
-function c() {
-  send(username, "c");
-}
-
-// d
-function d() {
-  send(username, "d");
-}
-
 // send
-function send(player, score) {
-  document.getElementById("player").value = player;
-  document.getElementById("score").value = score;
+function send() {
+  time2 = d.getTime();
+  diff = time - time2;
+  document.getElementById("player").value = username;
+  document.getElementById("answer").value = answer;
+  document.getElementById("time").value = diff;
   document.getElementById('form').submit();
 }

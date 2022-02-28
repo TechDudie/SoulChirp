@@ -33,7 +33,9 @@ def game():
 @app.route('/receive.html', methods=["GET","POST"])
 def receive():
   if request.method == 'POST':
-    pass
+    print(request.form)
+    print(request.form["answer"])
+    return load("redirect.html")
   else:
     return load("redirect.html")
 

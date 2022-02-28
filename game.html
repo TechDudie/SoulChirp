@@ -11,15 +11,15 @@
 <h1 id="question">Question</h1>
 </div>
 <div id="container">
-<button id="a" class="button" onclick="a()">A</button>
-<button id="b" class="button" onclick="b()">B</button>
-<button id="c" class="button" onclick="c()">C</button>
-<button id="d" class="button" onclick="d()">D</button>
-</div>
+<button id="a" class="button" onclick="answer='a';send();">A</button>
+<button id="b" class="button" onclick="answer='b';send();">B</button>
+<button id="c" class="button" onclick="answer='c';send();">C</button>
+<button id="d" class="button" onclick="answer='d';send();">D</button>
 </div>
 <div id="username">
 <textarea id="usernametext" name="usernametext" rows="1" cols="16" placeholder="Username">
 </textarea>
+</div>
 </div>
 <script>
 var question = "QUESTION";
@@ -32,6 +32,7 @@ var D = "ANSWERFORD";
 <form id="form" action="receive.html" method="POST">
 <input type="text" id="player" name="player" value="Nobody">
 <input type="text" id="answer" name="answer" value="0">
+<input type="text" id="time" name="time" value="60000">
 </form>
 </body>
 </html>

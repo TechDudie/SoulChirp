@@ -1,7 +1,14 @@
+html {
+  min-width: 100%;
+  width: 100%;
+}
 body {
   background-color: white;
   overflow: hidden;
   position: fixed;
+  min-width: 100%;
+  width: 100%
+  height: 100vh;
 }
 h1, h2 {
   color: black;
@@ -18,6 +25,20 @@ h1, h2 {
   width: 100%;
   height: 100%;
   padding: 10vh;
+}
+#username {
+  background-color: #000000;
+  min-width: 100%;
+  width: 100%;
+  height: 20vh;
+  top: 40vh;
+  padding: 5vh;
+  z-index: 2147483647;
+  position: fixed;
+}
+#usernametext {
+  width: calc(100% - 10vh);
+  height: 10vh;
 }
 .button {
   border: none;
