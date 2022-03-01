@@ -3,25 +3,25 @@ A: <html> and <html>
 B: <HTML> and </HTML>
 C: <html> and </html>
 D: PAGE_START and PAGE_END
-Correct: C
+Answer: C
 Which line of code defines a VALID javascript variable?
 A: var hello = "WORLD";
 B: hello = "WORLD";
 C: $hello = string "WORLD";
 D: hello <= "WORLD";
-Correct: A
+Answer: A
 What does PHP stand for?
 A: Professional Home Page Tools
 B: Professional Hierarchial Processing Tools
 C: Pretty Hello PHP Stuff
 D: PHP: Hypertext Processing
-Correct: D
+Answer: D
 What does <script> do?
 A: Run TypeScript
 B: Run HTMLScript
 C: Run JavaScript
 D: Run PHP
-Correct: C
+Answer: C
 What does HTTP stand for?
 A: Hierarchial TypeScript Telenetwork Processing 
 B: HyperText Transfer Protocol
