@@ -1,6 +1,8 @@
 from flask import Flask, request, redirect, send_from_directory, Response
 from lib.tools import *
 from lib.database import *
+from lib.questions import *
+
 app = Flask('app', static_url_path="")
 
 db = DB()
@@ -34,9 +36,13 @@ def game():
 def receive():
   if request.method == 'POST':
     print(request.form)
-    print(request.form["answer"])
+    print(point(request.form["t"]))
     return load("redirect.html")
   else:
     return load("redirect.html")
+
+@app.route('/delcookie.html')
+def delcookie():
+  return load('delcookie.html')
 
 app.run(host='0.0.0.0', port=8080)

@@ -11,10 +11,10 @@
 <h1 id="question">Question</h1>
 </div>
 <div id="container">
-<button id="a" class="button" onclick="answer='a';send();">A</button>
-<button id="b" class="button" onclick="answer='b';send();">B</button>
-<button id="c" class="button" onclick="answer='c';send();">C</button>
-<button id="d" class="button" onclick="answer='d';send();">D</button>
+<button id="a" class="button" onclick="send('a');">A</button>
+<button id="b" class="button" onclick="send('b');">B</button>
+<button id="c" class="button" onclick="send('c');">C</button>
+<button id="d" class="button" onclick="send('d');">D</button>
 </div>
 <div id="username">
 <textarea id="usernametext" name="usernametext" rows="1" cols="16" placeholder="Username">
@@ -22,17 +22,17 @@
 </div>
 </div>
 <script>
-var question = "QUESTION";
-var A = "ANSWERFORA";
-var B = "ANSWERFORB";
-var C = "ANSWERFORC";
-var D = "ANSWERFORD";
+var questiontoask = "QUESTION";
+var AA = "ANSWERFORA";
+var BB = "ANSWERFORB";
+var CC = "ANSWERFORC";
+var DD = "ANSWERFORD";
 </script>
 <script src="js/game.js"></script>
 <form id="form" action="receive.html" method="POST">
 <input type="text" id="player" name="player" value="Nobody">
-<input type="text" id="answer" name="answer" value="0">
-<input type="text" id="time" name="time" value="60000">
+<input type="text" id="ans" name="ans" value="VOID">
+<input type="text" id="t" name="t" value="VOID">
 </form>
 </body>
 </html>

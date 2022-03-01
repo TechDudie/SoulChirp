@@ -1,10 +1,9 @@
 var username = "";
-const d = new Date();
-var time = 0;
+var d = new Date();
+var time = d.getTime();
 var time2 = 0;
 var diff = 0;
 var timed = false;
-var answer = "x";
 
 function hide(id) {
   var object = element(id)
@@ -12,7 +11,7 @@ function hide(id) {
   object.style.visibility = "hidden";
 }
 
-if (getCookie() != "") {
+if ((typeof getCookie() === 'string') && (getCookie() != "")) {
   hide("username");
   timed = true;
   username = getCookie();
@@ -32,6 +31,12 @@ function element(id) {
   return document.getElementById(id);
 }
 
+var question = element('question').value = questiontoask;
+var a = element('a').value = AA;
+var b = element('b').value = BB;
+var c = element('c').value = CC;
+var ddd = element('d').value = DD;
+
 // input
 document.addEventListener("keydown",  e => {
   if (e.keyCode === 13) {
@@ -47,11 +52,12 @@ document.addEventListener("keydown",  e => {
 });
 
 // send
-function send() {
-  time2 = d.getTime();
-  diff = time - time2;
+function send(answer) {
+  var d2 = new Date();
+  time2 = d2.getTime();
+  diff = 0 - time + time2;
   document.getElementById("player").value = username;
-  document.getElementById("answer").value = answer;
-  document.getElementById("time").value = diff;
+  document.getElementById("ans").value = answer;
+  document.getElementById("t").value = diff;
   document.getElementById('form').submit();
 }
