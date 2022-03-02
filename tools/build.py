@@ -35,10 +35,10 @@ for i in array:
   x += 1
   i = remove(i)
   cycle()
-  if x > 5:
+  if x == 5:
     x = -1
     q += 1
-out("q = [")
+out("\nq = [")
 for i in range(1, q + 1):
   out("q{}, ".format(i))
 stdout = stdout[:-2]
