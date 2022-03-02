@@ -26,7 +26,7 @@ document.addEventListener("keydown",  e => {
       print("\nValid code. Connecting...");
       send(input)
     } else {
-      print("\nInvalid code. Try again.\n")
+      print("\nInvalid format. Try again.\n")
     }
     input = "";
   } else {
@@ -34,4 +34,4 @@ document.addEventListener("keydown",  e => {
   }
 });
 
-print("Welcome to TechnoQuiz. Enter game code:\n")
+print("Welcome to SoulChirp. Enter game code:\n")
