@@ -39,7 +39,7 @@ for i in array:
     x = -1
     q += 1
 out("\nq = [")
-for i in range(1, q + 1):
+for i in range(1, q):
   out("q{}, ".format(i))
 stdout = stdout[:-2]
 out("]")
