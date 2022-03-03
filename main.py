@@ -1,7 +1,7 @@
 from flask import Flask, request, redirect, send_from_directory, Response
 from lib.tools import *
 from lib.database import *
-from lib.questions import *
+from lib.question import *
 
 app = Flask('app', static_url_path="")
 
