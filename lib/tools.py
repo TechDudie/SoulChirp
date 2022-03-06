@@ -5,8 +5,11 @@ def point(time):
 def dashboardui(playernum, playerlist, questionid):
   html = load("dashboard.html")
   list = ""
+  keys = playerlist.keys()
+  playerlist = sorted(playerlist.items(), key=lambda kv:(kv[1], kv[0]))
+  playerlist = reversed(playerlist)
   for i in playerlist:
-    list += "<h3>" + i + "</h3>"
+    list += "<h3>" + i[0] + ": " + str(i[1]) + "</h3>"
   html = html.replace("PLAYERNUM", str(playernum))
   html = html.replace("<h1>PLAYERLIST</h1>", list)
   html = html.replace("123456", str(questionid))

@@ -6,9 +6,11 @@ from lib.question import *
 global players
 global qid
 global playerlist
+global status
 app = Flask('app', static_url_path="")
 players = 0
 qid = 0
+status = 0
 playerlist = ["TechnoDot", "SirAlexBigBrain"] # temp names
 
 db = DB()
@@ -46,6 +48,16 @@ def receive():
   if request.method == 'POST':
     print(request.form)
     print(point(request.form["t"]))
+    plyr = request.form["player"]
+    pts = db.get(plyr)
+    if pts == None:
+      db.store(plyr, 0)
+      pts = db.get(plyr)
+    print(q[qid]["answer"])
+    print(request.form["ans"].upper())
+    if q[qid]["answer"] == request.form["ans"].upper():
+      db.store(plyr, pts + point(request.form["t"]))
+    print(db.db)
     return load("redirect.html")
   else:
     return load("redirect.html")
@@ -55,14 +67,26 @@ def dashboard():
   global qid
   if request.method == 'POST':
     qid = request.form["qid"]
-    print(qid)
-    return dashboardui(players, playerlist, qid)
+    return dashboardui(players, db.db, qid)
   else:
-    #  return "unauthorized"
-    return dashboardui(players, playerlist, qid)
+    return dashboardui(players, db.db, qid)
+
+# system
+
+@app.route('/wait.html')
+def wait_html():
+  return load("wait.html")
+
+@app.route('/qid.html')
+def qid_html():
+  return qid
+
+
 # debug
 @app.route('/delcookie.html')
 def delcookie():
   return load('delcookie.html')
+
+
 
 app.run(host='0.0.0.0', port=8080)
