@@ -31,11 +31,11 @@ function element(id) {
   return document.getElementById(id);
 }
 
-var question = element('question').value = questiontoask;
-var a = element('a').value = AA;
-var b = element('b').value = BB;
-var c = element('c').value = CC;
-var ddd = element('d').value = DD;
+var question = element('question').innerHTML = questiontoask;
+var a = element('a').innerHTML = AA;
+var b = element('b').innerHTML = BB;
+var c = element('c').innerHTML = CC;
+var ddd = element('d').innerHTML = DD;
 
 // input
 document.addEventListener("keydown",  e => {

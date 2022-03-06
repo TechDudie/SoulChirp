@@ -22,7 +22,7 @@ q3 = {
   'a': "Professional Home Page Tools",
   'b': "Professional Hierarchial Processing Tools",
   'c': "Pretty Hello PHP Stuff",
-  'd': "PHP",
+  'd': "PHP: Hypertext Processing",
   'answer': "D",
 }
 q4 = {
