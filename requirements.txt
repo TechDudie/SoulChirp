@@ -2,5 +2,5 @@ Werkzeug
 MarkupSafe
 itsdangerous
 click
-Jinga2
+Jinja2
 flask
