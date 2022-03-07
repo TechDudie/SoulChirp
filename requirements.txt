@@ -1,0 +1,6 @@
+Werkzeug
+MarkupSafe
+itsdangerous
+click
+Jinga2
+flask
