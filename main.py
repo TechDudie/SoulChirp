@@ -79,8 +79,7 @@ def wait_html():
 
 @app.route('/qid.html')
 def qid_html():
-  return qid
-
+  return str(qid)
 
 # debug
 @app.route('/delcookie.html')

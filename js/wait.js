@@ -1,6 +1,6 @@
 quotes = ["Genius machine?", "Trigger happy or true genius?", "Were you toooooooo fast?"];
 qt = quotes[Math.floor(Math.random() * quotes.length)];
-document.getElementByID("quote").innerHTML = qt;
+document.getElementById("quote").innerHTML = qt;
 
 // wait until signal
 var current = 0;
@@ -20,9 +20,27 @@ function check() {
   request.send(null);
   request.onreadystatechange = function() {
     if (request.readyState == 4) {
-      window.location.replace("game.html");
+      console.log(current);
+      console.log(typeof current);
+      console.log(request.responseText);
+      console.log(typeof request.responseText);
+      console.log(current !== request.responeText);
+      currint = parseInt(current);
+      text = parseInt(request.responseText);
+      console.log(currint);
+      console.log(typeof currint);
+      console.log(text);
+      console.log(typeof text);
+      console.log(currint !== text);
+      if (typeof request.responseText == "undefined") {
+        return null;
+      }
+      if ((parseInt(current) - parseInt(request.reponseText)) === 0) {
+        console.log("YAY OMGOMGOMGMGOM");
+        //window.location.replace("game.html");
+      }
     }
   };
 }
-
-setInterval(check, 1)
+//check();
+setInterval(check, 1000)
