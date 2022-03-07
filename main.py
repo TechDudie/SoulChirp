@@ -16,7 +16,7 @@ playerlist = ["TechnoDot", "SirAlexBigBrain"] # temp names
 db = DB()
 @app.route('/')
 def root():
-  return '<h1>Hello, World!</h1>'
+  return '<h1>Hello, World!</h1>\n<p>I think you\'re looking for <a href=\'https://flaskprojc.technologydev.repl.co/index.html\'>this</a>!'
 
 @app.route('/css/<path:path>')
 def css_(path):
@@ -58,7 +58,7 @@ def receive():
     if q[qid]["answer"] == request.form["ans"].upper():
       db.store(plyr, pts + point(request.form["t"]))
     print(db.db)
-    return load("redirect.html")
+    return load("wait.html")
   else:
     return load("redirect.html")
 
@@ -66,7 +66,7 @@ def receive():
 def dashboard():
   global qid
   if request.method == 'POST':
-    qid = request.form["qid"]
+    qid = int(request.form["qid"])
     return dashboardui(players, db.db, qid)
   else:
     return dashboardui(players, db.db, qid)
