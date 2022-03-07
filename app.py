@@ -33,7 +33,7 @@ def index():
   if request.method == 'POST':
     if request.form['code'] == "314159":
       players += 1
-      return load("redirect.html").replace("index.html", "game.html")
+      return load("redirect.html").replace("index.html", "wait.html")
     else:
       return load("index.html")
   else:
