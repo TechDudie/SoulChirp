@@ -48,6 +48,7 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "qid.html", true);
 xhttp.send();
 
+var past = [];
 function check() {
   var now = 0;
   var xhttp2 = new XMLHttpRequest();
@@ -59,20 +60,26 @@ function check() {
       console.log(now);
       console.log(typeof now);
       console.log(now - current);
+      past.append(now);
       if (typeof current == "undefined") {
         return null;
       }
       if (current == 0) {
         return null;
       }
+      /*
       if ((now - current) == 0) {
         return null;
       }
       if (now - current) {
         location.replace("game.html");
       }
-      console.log("hmm")
-      location.replace("game.html");
+      */
+      if (past.every((val, i, arr) => val === arr[0])) {
+        console.log("hmm");
+        past = [];
+        location.replace("game.html");
+      }
     }
   };
   xhttp2.open("GET", "qid.html", true);
