@@ -12,7 +12,7 @@ global status
 app = Flask('app', static_url_path="")
 players = 0
 qid = 0
-status = 0
+status = False
 playerlist = ["TechnoDot", "SirAlexBigBrain"] # temp names
 
 db = DB()
@@ -93,5 +93,4 @@ def delcookie():
   return load('delcookie.html')
 
 
-#if sys.argv[1] == "repl":
-#  app.run(host='0.0.0.0', port=8080)
+app.run(host='0.0.0.0', port=8080)
