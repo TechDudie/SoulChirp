@@ -54,9 +54,10 @@ function check() {
   xhttp2.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       now = parseInt(xhttp2.responseText);
-      if (current !== now) {
-        location.replace("game.html");
+      if (current - now) {
+        return null;
       }
+      location.replace("game.html");
     }
   };
   xhttp2.open("GET", "qid.html", true);
