@@ -79,7 +79,14 @@ function check() {
       }
       */
       console.log(past);
+      /*
       if (!(past.every((val, i, arr) => val === arr[0]))) {
+        console.log("hmm");
+        past = [];
+        //location.replace("game.html");
+      }
+      */
+      if (!(past.indexOf(current + 1) == -1)) {
         console.log("hmm");
         past = [];
         //location.replace("game.html");
