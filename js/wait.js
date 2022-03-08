@@ -37,7 +37,7 @@ function check() {
 //check();
 setInterval(check, 1000)
 */
-/*
+
 var current = 0;
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -59,6 +59,9 @@ function check() {
       console.log(now);
       console.log(typeof now);
       console.log(now - current);
+      if ((now - current) == 0) {
+        return null;
+      }
       if (now - current) {
         location.replace("game.html");
       }
@@ -68,8 +71,9 @@ function check() {
   xhttp2.open("GET", "qid.html", true);
   xhttp2.send();
 }
-*/
+setInterval(check, 1000);
 
+/*
 function check() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -87,3 +91,4 @@ function check() {
 }
 
 setInterval(check, 1000);
+*/
