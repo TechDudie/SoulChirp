@@ -2,6 +2,7 @@ from flask import Flask, request, redirect, send_from_directory, Response
 from lib.tools import *
 from lib.database import *
 from lib.question import *
+import sys
 
 global players
 global qid
@@ -87,5 +88,5 @@ def delcookie():
   return load('delcookie.html')
 
 
-
-#app.run(host='0.0.0.0', port=8080)
+if sys.argv[1] == "repl":
+  app.run(host='0.0.0.0', port=8080)
