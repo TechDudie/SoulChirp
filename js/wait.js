@@ -82,7 +82,7 @@ function check() {
       if (!(past.every((val, i, arr) => val === arr[0]))) {
         console.log("hmm");
         past = [];
-        location.replace("game.html");
+        //location.replace("game.html");
       }
     }
   };
