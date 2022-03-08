@@ -89,7 +89,7 @@ function check() {
       if (!(past.indexOf(current + 1) == -1)) {
         console.log("hmm");
         past = [];
-        //location.replace("game.html");
+        location.replace("game.html");
       }
     }
   };
