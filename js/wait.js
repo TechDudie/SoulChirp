@@ -38,7 +38,7 @@ function check() {
 setInterval(check, 1000)
 */
 
-var current = 0;
+var current;
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -59,13 +59,17 @@ function check() {
       console.log(now);
       console.log(typeof now);
       console.log(now - current);
+      if (typeof current == "undefined") {
+        return null;
+      }
       if ((now - current) == 0) {
         return null;
       }
       if (now - current) {
         location.replace("game.html");
       }
-      //location.replace("game.html");
+      console.log("hmm")
+      location.replace("game.html");
     }
   };
   xhttp2.open("GET", "qid.html", true);
