@@ -60,7 +60,7 @@ function check() {
       console.log(now);
       console.log(typeof now);
       console.log(now - current);
-      past.append(now);
+      past.push(now);
       if (typeof current == "undefined") {
         return null;
       }
