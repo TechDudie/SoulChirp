@@ -67,6 +67,9 @@ function check() {
       if (current == 0) {
         return null;
       }
+      if (now == 0) {
+        return null;
+      }
       /*
       if ((now - current) == 0) {
         return null;
