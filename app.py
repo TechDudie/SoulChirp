@@ -88,5 +88,5 @@ def delcookie():
   return load('delcookie.html')
 
 
-if sys.argv[1] == "repl":
-  app.run(host='0.0.0.0', port=8080)
+#if sys.argv[1] == "repl":
+#  app.run(host='0.0.0.0', port=8080)
