@@ -37,7 +37,7 @@ function check() {
 //check();
 setInterval(check, 1000)
 */
-
+/*
 var current = 0;
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -68,4 +68,23 @@ function check() {
   xhttp2.open("GET", "qid.html", true);
   xhttp2.send();
 }
+setInterval(check, 1000);
+*/
+
+function check() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var now = xhttp.responseText;
+      console.log(now);
+      if (now === "True") {
+        location.replace("game.html");
+      }
+      //location.replace("game.html");
+    }
+  };
+  xhttp.open("GET", "qid.html", true);
+  xhttp.send();
+}
+
 setInterval(check, 1000);
