@@ -75,7 +75,8 @@ function check() {
         location.replace("game.html");
       }
       */
-      if (past.every((val, i, arr) => val === arr[0])) {
+      console.log(past);
+      if (!(past.every((val, i, arr) => val === arr[0]))) {
         console.log("hmm");
         past = [];
         location.replace("game.html");
