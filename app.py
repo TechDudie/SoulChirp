@@ -3,6 +3,7 @@ from lib.tools import *
 from lib.database import *
 from lib.question import *
 import sys
+import time
 
 global players
 global qid
@@ -66,8 +67,12 @@ def receive():
 @app.route('/dashboard.html', methods=["GET","POST"])
 def dashboard():
   global qid
+  global status
   if request.method == 'POST':
     qid = int(request.form["qid"])
+    status = True
+    time.sleep(2)
+    status = False
     return dashboardui(players, db.db, qid)
   else:
     return dashboardui(players, db.db, qid)
@@ -80,7 +85,7 @@ def wait_html():
 
 @app.route('/qid.html')
 def qid_html():
-  return str(qid)
+  return str(status)
 
 # debug
 @app.route('/delcookie.html')
