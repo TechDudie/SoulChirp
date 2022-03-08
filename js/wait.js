@@ -82,14 +82,14 @@ function check() {
       if (!(past.every((val, i, arr) => val === arr[0]))) {
         console.log("hmm");
         past = [];
-        //location.replace("game.html");
+        location.replace("game.html");
       }
     }
   };
   xhttp2.open("GET", "qid.html", true);
   xhttp2.send();
 }
-setInterval(check, 1000);
+setInterval(check, 100);
 
 /*
 function check() {
