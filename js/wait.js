@@ -62,6 +62,9 @@ function check() {
       if (typeof current == "undefined") {
         return null;
       }
+      if (current == 0) {
+        return null;
+      }
       if ((now - current) == 0) {
         return null;
       }
