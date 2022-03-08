@@ -68,7 +68,6 @@ function check() {
   xhttp2.open("GET", "qid.html", true);
   xhttp2.send();
 }
-setInterval(check, 1000);
 */
 
 function check() {
