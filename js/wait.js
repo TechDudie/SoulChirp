@@ -1,6 +1,15 @@
-quotes = ["Genius machine?", "Trigger happy or true genius?", "Were you toooooooo fast?"];
-qt = quotes[Math.floor(Math.random() * quotes.length)];
+var quotes = ["Genius machine?", "Trigger happy or true genius?", "Were you toooooooo fast?"];
+var qt = quotes[Math.floor(Math.random() * quotes.length)];
 document.getElementById("quote").innerHTML = qt;
+var storage = window.localStorage;
+var count = 0;
+if (storage.getItem("item")) {
+  count = parseInt(storage.getItem("item"));
+}
+
+count += 1;
+document.getElementById("debug").innerHTML = count;
+storage.setItem("item", count.toString());
 
 function same(arr) {
   var last = arr[0]
@@ -96,9 +105,11 @@ function check() {
         //location.replace("game.html");
       }
       */
-      if (!past.every(v => v === past[0])) {
+      //if (!past.every(v => v === past[0])) {
+      if (past.indexOf(count) !== -1) {
         console.log("hmm");
         past = [];
+        document.getElementById("debug").innerHTML = "success";
         location.replace("game.html");
       }
     }

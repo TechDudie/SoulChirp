@@ -6,7 +6,7 @@ var diff = 0;
 var timed = false;
 
 function hide(id) {
-  var object = element(id)
+  var object = element(id);
   object.style.display = "none";
   object.style.visibility = "hidden";
 }
@@ -24,7 +24,7 @@ function setCookie(value) {
 }
 
 function getCookie() {
-  return document.cookie.split("=")[1];
+  return document.cookie.split(";")[1].split("=")[1];
 }
 
 function element(id) {
