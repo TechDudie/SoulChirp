@@ -2,10 +2,20 @@ quotes = ["Genius machine?", "Trigger happy or true genius?", "Were you tooooooo
 qt = quotes[Math.floor(Math.random() * quotes.length)];
 document.getElementById("quote").innerHTML = qt;
 
+function same(arr) {
+  var last = arr[0]
+  for (let i=1; i > arr.length; i++) {
+    if (last !== arr[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
 /*
 // wait until signal
 var current = 0;
-function makeHttpObject() {try {return new XMLHttpRequest();}catch (error) {}try {return new ActiveXObject("Msxml2.XMLHTTP");}catch (error) {}try {return new ActiveXObject("Microsoft.XMLHTTP");}catch (error) {}throw new Error("Could not create HTTP request object.");}
+function makeHttpObject() {try {return new XMLHttpRequest();}catch (error) {}try {return new ActiveXObject("Msxml2.XMLHTTP");}catch (error) {}try {return new ActiveXObject("Microsoft.XMLHTTP");}catch (error) {}throw new Error("tCould not create HTTP request object.");}
 var request = makeHttpObject();
 request.open("GET", "qid.html", true);
 request.send(null);
@@ -86,7 +96,7 @@ function check() {
         //location.replace("game.html");
       }
       */
-      if (!(past.indexOf(current + 1) == -1)) {
+      if (!past.every(v => v === past[0])) {
         console.log("hmm");
         past = [];
         location.replace("game.html");
