@@ -1,5 +1,5 @@
 #run = "php -S 0.0.0.0:8000 -t ."
-run = "python3 app.py repl"
+run = "python3 app.py replit"
 
 #entrypoint = "index.php"
 entrypoint = "app.py"

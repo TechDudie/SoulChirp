@@ -87,4 +87,5 @@ def qid_html():
 def delcookie():
   return load('delcookie.html')
 
-app.run(host='0.0.0.0', port=8080)
+if sys.argv[1] == "replit":
+  app.run(host='0.0.0.0', port=8080)

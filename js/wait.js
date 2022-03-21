@@ -6,7 +6,6 @@ var count = 0;
 if (storage.getItem("item")) {
   count = parseInt(storage.getItem("item"));
 }
-
 count += 1;
 document.getElementById("debug").innerHTML = count;
 storage.setItem("item", count.toString());

@@ -24,7 +24,7 @@ function setCookie(value) {
 }
 
 function getCookie() {
-  return document.cookie.split(";")[1].split("=")[1];
+  return document.cookie.split("=")[1];
 }
 
 function element(id) {
