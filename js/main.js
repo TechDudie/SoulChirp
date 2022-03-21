@@ -34,4 +34,14 @@ document.addEventListener("keydown",  e => {
   }
 });
 
-print("Welcome to SoulChirp. Enter game code:\n")
+print(`Welcome to SoulChirp.
+
+TechDudie/SoulChirp is licensed under the GNU General Public License v3.0. Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
+Further consequential use of this site results in your agreement of the usage of cookies, that they are enabled, and that we take no responsibility whatsoever if your client crashes or suffers any technological issues.
+Hacking or any actions with malicious intent could be punishable with the proper authorities.
+Failure to comply with these rules will result in your service being terminated abruptly without any warning or your consent, and we do not take any responsibility for anything that consequentially occurs whatsoever.
+
+Written by TechDudie/TechnoDot in Hypertext Markup Language, Cascading Style Sheets, JavaScript, and Python.
+
+Enter game code:
+`);
