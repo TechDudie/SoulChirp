@@ -73,7 +73,6 @@ def dashboard():
     return dashboardui(players, db.db, qid)
 
 # system
-
 @app.route('/wait.html')
 def wait_html():
   return load("wait.html")
